@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "nyc mocha --require ts-node/register --recursive test/**/*.test.ts"
+    "test": "nyc --reporter=lcov mocha --require ts-node/register --recursive test/**/*.test.ts"
   },
   "nyc": {
     "include": [
@@ -34,6 +34,7 @@
     "approvals": "^3.0.2",
     "chai": "^4.2.0",
     "mocha": "^5.2.0",
+    "nyc": "^14.1.1",
     "source-map-support": "^0.5.12"
   },
   "dependencies": {
@@ -41,7 +42,6 @@
     "@types/node": "^10.12.18",
     "istanbul": "0.4.5",
     "lodash": "^4.17.11",
-    "nyc": "^14.1.1",
     "ts-node": "^7.0.1",
     "typescript": "^3.2.2"
   }
